@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMasterForm.master.cs" Inherits="TadelatApplication.AdminMasterForm" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/css/sticky-footer-navbar.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title>منظومة التعديلات</title>
+</head>
+<body>
+        <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container" dir="rtl">
+            <div class="navbar-header navbar-right">
+                <a class="navbar-brand" href="#">منظومة التعديلات</a>
+            </div>
+            <div class="navbar-header navbar-right">
+                <a class="navbar-brand" href="#"><%--<%= Session["FullName"].ToString() %>--%></a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse navbar-left">
+                <ul class="nav navbar-nav">
+                    <li><a href="LogoutForm.aspx"><b>تسجيل الخروج</b></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="RecoveryForm.aspx"><b>تغيير كلمة المرور</b></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="TypesForm.aspx"><b>أنواع التعديلات</b></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="UsersForm.aspx"><b>المستخدمون</b></a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="HomeForm.aspx"><b>طلبات التعديل</b></a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <form id="form1" runat="server" style="padding: 10px; 
+        padding-top: 60px; margin-left: auto; margin-right: auto;" class="container-fluid">
+        <div class="container-fluid" dir="rtl">
+        <asp:ContentPlaceHolder ID="Main" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
